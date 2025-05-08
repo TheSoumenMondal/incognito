@@ -1,36 +1,122 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Incognito
 
-## Getting Started
+&#x20;
 
-First, run the development server:
+**Incognito** is an open‑source, anonymous feedback platform built with Next.js and Tailwind CSS. It empowers individuals, teams, and communities to share honest messages or feedback without revealing senders' identities.
+
+---
+
+### 🚀 Key Features
+
+* **Complete Anonymity:** No sign‑up or third‑party login required; choose any username and start sharing or receiving feedback instantly.
+* **Custom Feedback Links:** Generate and share a unique URL to collect anonymous messages.
+* **Real‑Time Updates:** Messages appear in real‑time thanks to server‑side rendering and client‑side hooks.
+* **Scalable Data Store:** Uses MongoDB for flexible, schema‑free storage and easy horizontal scaling.
+* **Responsive Design:** Built with Tailwind CSS v4 to ensure a seamless experience across devices.
+
+---
+
+## 🛠 Tech Stack
+
+* **Framework:** Next.js 15
+* **Styling:** Tailwind CSS v4
+* **Database:** MongoDB (via Mongoose)
+* **Authentication:** Username only (no OAuth)
+* **Deployment:** Vercel (recommended)
+
+---
+
+## 📥 Getting Started
+
+Clone the repository and install dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repo
+git clone https://github.com/TheSoumenMondal/incognito.git
+cd incognito
+
+# Install dependencies
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🔧 Configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a `.env.local` file in the project root and add the following variables:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```dotenv
+MONGODB_URI=<your-mongodb-connection-string>
+NEXT_PUBLIC_BASE_URL=<your-app-url> # e.g. https://incognito.example.com
+```
 
-## Learn More
+### 🏃‍♂️ Running Locally
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+# Start development server
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Build and preview
+npm run build
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visit `http://localhost:3000` to view the app.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📂 Project Structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+├── src                # Source code
+│   ├── app            # App Router entry points
+│   │   ├── routes     # Route groups
+│   │   │   ├── console
+│   │   │   ├── message
+│   │   │   │   └── [id]  # Dynamic feedback page
+│   │   │   └── settings
+│   │   ├── api        # API route handlers
+│   │   ├── globals.css# Global styles
+│   │   ├── layout.tsx # Root layout
+│   │   └── page.tsx   # Home page
+│   ├── components    # Reusable UI components
+│   ├── hooks         # Custom React hooks
+│   ├── lib           # Database and API utilities
+│   ├── models        # Mongoose models/schemas
+│   ├── providers     # Context providers
+│   └── store         # State management (Zustand)
+└── README.md          # Project documentation
+```
+
+---
+
+## 🚀 Deployment
+
+**On Vercel (Recommended)**
+
+1. Push the repository to GitHub.
+2. Import the project in [Vercel](https://vercel.com/).
+3. Set environment variables in the Vercel dashboard.
+4. Trigger a deployment — your app will be live on the configured domain.
+
+---
+
+## ❤️ Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork this repository.
+2. Create a feature branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Open a Pull Request.
+
+Please ensure your code adheres to the existing style and includes relevant tests.
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+*Built with ❤️ by Soumen Mondal*
