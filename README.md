@@ -6,6 +6,10 @@
 
 ---
 
+![App Preview](https://drive.google.com/uc?id=1XJFm9aUjAfOQkOk2E7xWFIi7gYzLDTHn)
+
+---
+
 ### 🚀 Key Features
 
 * **Complete Anonymity:** No sign‑up or third‑party login required; choose any username and start sharing or receiving feedback instantly.
@@ -44,8 +48,11 @@ npm install
 Create a `.env.local` file in the project root and add the following variables:
 
 ```dotenv
-MONGODB_URI=<your-mongodb-connection-string>
-NEXT_PUBLIC_BASE_URL=<your-app-url> # e.g. https://incognito.example.com
+NEXT_PUBLIC_GITHUB_URL=https://api.github.com/repos/TheSoumenMondal/incognito
+NEXT_PUBLIC_GITHUB_TOKEN="your github token"
+NEXT_PUBLIC_MONGODB_URI=<your-mongodb-connection-string>
+NEXT_PUBLIC_APP_URL=<your-app-url> # e.g. https://incognito.example.com
+
 ```
 
 ### 🏃‍♂️ Running Locally
@@ -85,37 +92,6 @@ Visit `http://localhost:3000` to view the app.
 │   └── store         # State management (Zustand)
 └── README.md          # Project documentation
 ```
-
----
-
-## 🚀 Deployment
-
-**On Vercel (Recommended)**
-
-1. Push the repository to GitHub.
-2. Import the project in [Vercel](https://vercel.com/).
-3. Set environment variables in the Vercel dashboard.
-4. Trigger a deployment — your app will be live on the configured domain.
-
----
-
-## ❤️ Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork this repository.
-2. Create a feature branch: `git checkout -b feature/YourFeature`
-3. Commit your changes: `git commit -m 'Add some feature'`
-4. Push to the branch: `git push origin feature/YourFeature`
-5. Open a Pull Request.
-
-Please ensure your code adheres to the existing style and includes relevant tests.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
