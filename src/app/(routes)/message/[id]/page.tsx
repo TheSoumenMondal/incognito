@@ -52,7 +52,8 @@ const Message = () => {
       setMessage("");
       setSenderName("");
       router.push("/");
-    } catch (error: any) {
+
+    } catch (error: Error | unknown) {
       if (axios.isAxiosError(error)) {
         if (error.response?.status === 403) {
           toast.error("This user is not accepting messages.");

@@ -12,13 +12,13 @@ import { Star } from "lucide-react";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [starCount, setStarCount] = useState<number>(0);
-
   const { username, setUsername } = useUserDetailsStore();
   const [message, setMessage] = useState<string>("");
 
   const router = useRouter();
+
   useEffect(() => {
     const getStartCount = async () => {
       const res = await axios.get("/api/get-star-count");
@@ -39,6 +39,7 @@ const page = () => {
           setMessage(res.data.message);
         } catch (err) {
           setMessage("Error checking username");
+          console.warn(err);
         }
       } else {
         setMessage("");
@@ -46,7 +47,7 @@ const page = () => {
     };
 
     checkUniqueness();
-  }, [debouncedUsername]);
+  }, [debouncedUsername, username]);
 
   const handleClick = () => {
     router.push("https://github.com/TheSoumenMondal/incognito");
@@ -184,4 +185,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

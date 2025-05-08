@@ -13,6 +13,7 @@ const Console = () => {
   const [loading, setLoading] = useState(true);
   const [auth, setAuth] = useState<boolean>(true);
   const router = useRouter();
+  
   useEffect(() => {
     const checkAuth = async () => {
       if (!username || !user_password) {
