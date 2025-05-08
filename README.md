@@ -10,7 +10,7 @@
 
 * **Complete Anonymity:** No sign‑up or third‑party login required; choose any username and start sharing or receiving feedback instantly.
 * **Custom Feedback Links:** Generate and share a unique URL to collect anonymous messages.
-* **Real‑Time Updates:** Messages appear in real‑time thanks to server‑side rendering and client‑side hooks.
+* **Real‑Time Updates:** Messages appear in some seconds due the long pollings.
 * **Scalable Data Store:** Uses MongoDB for flexible, schema‑free storage and easy horizontal scaling.
 * **Responsive Design:** Built with Tailwind CSS v4 to ensure a seamless experience across devices.
 
