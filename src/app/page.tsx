@@ -74,7 +74,7 @@ const Page = () => {
               strokeWidth={2}
               aria-hidden="true"
             />
-            <span className="flex text-sm gap-2 text-black dark:text-white">
+            <span className="flex text-sm gap-2 ">
               Give a Star on Github
               <span className="font-bold flex items-center justify-center text-black dark:text-white">
                 {starCount}
