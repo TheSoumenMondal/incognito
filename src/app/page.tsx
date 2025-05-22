@@ -69,14 +69,14 @@ const Page = () => {
             className="px-5 py-2 flex items-center justify-center"
           >
             <Star
-              className="-ms-1 me-2 text-black dark:text-white"
+              className="-ms-1 me-2 "
               size={16}
               strokeWidth={2}
               aria-hidden="true"
             />
             <span className="flex text-sm gap-2 ">
               Give a Star on Github
-              <span className="font-bold flex items-center justify-center text-black dark:text-white">
+              <span className="font-bold flex items-center justify-center">
                 {starCount}
               </span>
             </span>
